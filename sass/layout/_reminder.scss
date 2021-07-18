@@ -1,0 +1,28 @@
+.reminder {
+    background-image: linear-gradient(105deg, rgba($color-secondry, 0.65) 0%, rgba($color-primary, 0.65) 100%),
+        url("../img/man-cellphone.jpg");
+    background-size: cover;
+    background-position: center;
+    margin: 5rem 20rem;
+    height: 45rem;
+
+    border-radius: 10px;
+    box-shadow: 1rem 2rem 5rem rgba($color-black, 0.5);
+
+    position: relative;
+
+    @include respond(big) {
+        margin: 5rem 13rem;
+        height: 60rem;
+    }
+
+    @include respond(small) {
+        margin: 0;
+        height: 98rem;
+        box-shadow: none;
+        border-radius: 0;
+    }
+
+    @include respond(phone) {
+    }
+}

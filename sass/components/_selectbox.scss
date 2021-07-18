@@ -1,0 +1,92 @@
+.select {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+
+    position: relative;
+    width: 100%;
+
+    .select-view {
+        font-size: 1.3rem;
+        padding: 1.2rem 1rem;
+        border-radius: 0.5rem;
+        background-color: $color-white;
+        opacity: 0.8;
+        width: 90%;
+        box-shadow: none;
+
+        @include respond(small) {
+            font-size: 2rem;
+            width: 100%;
+        }   
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        transition: all 0.2s ease;
+
+        .select-view__text {
+            margin-right: 1rem;
+            transition: all 0.2s ease;
+        }
+
+        .select-view__icon {
+            font-size: 1.5rem;
+            transition: all 0.2s ease;
+        }
+    }
+
+    .select-options {
+        font-size: 1.4rem;
+        padding: 2rem 1rem;
+        margin-top: .4rem;
+
+
+        border-radius: 0.5rem;
+        background-color: $color-white;
+        width: 90%;
+        box-shadow: 0 1rem 2rem rgba($color: $color-black, $alpha: .3);
+        z-index: 20;
+
+        @include respond(small) {
+            font-size: 2rem;
+            width: 100%;
+        }
+
+        position: absolute;
+        top: 100%;
+
+        display: none;
+        opacity: 0;
+        transition: all .2s ease;
+    }
+
+    .select-option {
+        padding: 0.5rem 0;
+        color: $color-grey-dark-1;
+        display: block;
+        transition: all 0.2s ease;
+
+        &:hover {
+            transform: scale(1.07);
+        }
+    }
+
+    &:hover .select-options {
+        opacity: 1;
+        display: block;
+        
+    }
+
+    &:hover .select-view__icon,
+    &:hover .select-view__text {
+        color: $color-secondry;
+    }
+
+    &:hover .select-view {
+        opacity: 1;
+        // border: 1px solid $color-secondry;
+        box-shadow: 0 1rem 2rem rgba($color: $color-black, $alpha: .3);
+    }
+}

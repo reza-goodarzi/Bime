@@ -1,0 +1,35 @@
+//   COLORS
+$color-primary: #20ab6d;
+$color-secondry: #358cda;
+$color-light-green: #41a77d;
+
+$color-white: #fcfdfd;
+$color-white-2: #f8f8f8;
+$color-light: #effad3;
+$color-black: #30302f;
+
+$color-grey-light-1: #f9f7f6;
+$color-grey-light-2: #aaa;
+
+
+$color-grey-dark-1: #54483A;
+$color-grey-dark-2: #6D5D4B;
+
+// FONT
+@font-face {
+    font-family: vazir;
+    src: url(../font/Vazir-FD-WOL.eot);
+    src: url(../font/Vazir-FD-WOL.ttf),
+    url(../font/Vazir-FD-WOL.woff),
+    url(../font/Vazir-FD-WOL.woff2);
+}
+
+$font-primary: vazir, cursive;
+
+
+$boxshadow-light: 0 2rem 7rem rgba(#000, .1);
+$boxshadow-dark: 0 5rem 10rem rgba(#000, .3);
+$textshadow-1: 0 0 1rem rgba($color-primary, 0.3); 
+$textshadow-2: 0 0 1rem rgba($color-black, 0.2); 
+
+$border-1: 2px solid $color-primary;

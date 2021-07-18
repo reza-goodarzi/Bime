@@ -1,0 +1,102 @@
+.nav {
+    grid-column: 1/-1;
+    align-self: stretch;
+    justify-self: stretch;
+    // margin: 0 5rem;
+
+    // display: grid;
+    // grid-template-columns: 1fr 15rem;
+    // grid-template-rows: 7rem;
+    // align-items: center;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 2rem 10rem;
+    background-color: $color-primary;
+
+    position: fixed;
+    position: -webkit-fixed;
+    top: 0;
+    right: 0;
+    width: 100vw;
+    box-shadow: 0 2px 1rem rgba($color-black, 0.5);
+    z-index: 2000;
+
+    @include respond(big) {
+        padding: 1.5rem 3rem;
+        position: relative;
+        width: auto;
+    }
+
+    @include respond(small) {
+        padding: 1rem;
+    }
+
+    i {
+        display: none;
+
+        @include respond(small) {
+            display: block;
+            font-size: 5rem;
+            color: $color-white;
+            margin-left: auto;
+            padding: 1rem 2rem;
+            transition: all .2s ease;
+
+            &:hover{
+                color: darken($color-white, 20%);
+            }
+        }
+    }
+
+    &__item {
+        list-style: none;
+        margin-left: auto;
+
+        // display: grid;
+        // grid-template-columns: repeat(5, max-content);
+        display: flex;
+
+        @include respond(small) {
+            // flex-direction: column;
+            // justify-content: center;
+            // align-items: center;
+            // position: absolute;
+            // top: 99%;
+            // width: 100%;
+            // background-color: $color-primary;
+            display: none;
+        }
+
+        &--list {
+            display: inline-block;
+        }
+
+        a {
+            &,
+            &:link,
+            &:visited {
+                // <a>
+                text-decoration: none;
+                padding: 1rem 2rem;
+                font-family: $font-primary;
+                font-size: 1.8rem;
+                color: $color-white;
+
+                // <button>
+                border: none;
+                border-radius: none;
+                cursor: pointer;
+                transition: all 0.2s;
+            }
+
+            &:hover,
+            &:active {
+                // color: $color-primary;
+                text-shadow: 0 0 1rem rgba($color-white, 0.3);
+            }
+        }
+    }
+}

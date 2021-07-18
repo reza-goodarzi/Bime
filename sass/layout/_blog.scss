@@ -1,0 +1,149 @@
+.blog {
+    background-color: $color-white-2;
+    padding: 5rem 5rem;
+
+    @include respond(big) {
+        padding: 3rem 1rem;
+    }
+
+    @include respond(phone) {
+        padding: 1rem 0;
+    }
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    h2 {
+        text-shadow: $textshadow-2;
+    }
+
+    .blog-container {
+        display: flex;
+        // width: fit-content;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+
+        // @include respond(phone) {
+        //     flex-direction: column;
+        //     justify-content: center;
+        //     align-items: center;
+        // }
+
+        .blog-item {
+            width: 30rem;
+            border-radius: 5px;
+            background-color: $color-white;
+            box-shadow: 0 1rem 2rem rgba($color-grey-dark-1, 0.3);
+            margin: 5rem 1rem;
+
+            @include respond(small) {
+                // width: 31rem;
+                margin: 2rem 1rem;
+                font-size: 2rem;
+            }
+            @include respond(phone) {
+                width: 90%;
+                margin: 2rem 3rem;
+            }
+
+            &__head {
+                position: relative;
+
+                img {
+                    height: 20rem;
+                    width: 100%;
+                    object-fit: cover;
+                    border-radius: 5px;
+
+                    @include respond(phone) {
+                        height: 35rem;
+                    }
+                }
+
+                .blog-item__date {
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+
+                    display: flex;
+                    align-items: center;
+                    margin: 1.2rem 1rem;
+                    // text-align: center;
+                    @include respond(phone) {
+                        margin: 2rem;
+                    }
+                }
+
+                .month {
+                    background-color: $color-primary;
+                    border-radius: 3px 0 0 3px;
+                    padding: 2px 1.2rem;
+                    color: $color-white;
+                    @include respond(phone) {
+                        padding: 0.5rem 2rem;
+                        font-size: 2rem;
+                    }
+                }
+
+                .day {
+                    background-color: $color-white;
+                    border-radius: 0 3px 3px 0;
+                    padding: 2px 1rem;
+                    @include respond(phone) {
+                        padding: 0.5rem 2rem;
+                        font-size: 2rem;
+                    }
+                }
+            }
+
+            &__body {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                padding: 1rem;
+
+                @include respond(phone) {
+                    padding: 1rem 2rem;
+                }
+
+                color: $color-grey-dark-1;
+                h3 {
+                    padding: 0 1rem;
+                    text-shadow: $textshadow-2;
+                    transition: all 0.2s ease;
+                    font-size: 1.8rem;
+                    cursor: pointer;
+
+                    @include respond(big) {
+                        font-size: 1.7rem;
+                    }
+
+                    @include respond(phone) {
+                        font-size: 2.5rem;
+                    }
+
+                    &:hover {
+                        color: $color-primary;
+                        text-shadow: $textshadow-1;
+                    }
+                }
+
+                p {
+                    padding: 0 1rem;
+                    @include respond(phone) {
+                        font-size: 2.2rem;
+                    }
+                }
+
+                a {
+                    margin: 2rem 0;
+                    @include respond(phone) {
+                        margin: 5rem 0;
+                        font-size: 2.5rem;
+                    }
+                }
+            }
+        }
+    }
+}

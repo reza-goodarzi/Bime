@@ -1,0 +1,44 @@
+@mixin label-position {
+    position: absolute;
+    top: -2.5rem;
+    right: 5px;
+
+    font-size: 1.3rem;
+    color: $color-white;
+    text-shadow: 0 2px 5px rgba($color: $color-white, $alpha: 0.5);
+    pointer-events: none;
+
+    opacity: 1;
+
+    @include respond(big){
+
+    }
+    
+    @include respond(big) {
+        top: -3.5rem;
+        font-size: 1.8rem;
+    }
+}
+
+
+@mixin respond($breakpoint) {
+    @if $breakpoint == phone {
+        @media only screen and (max-width: 37.5em) { @content }; //600px
+    }
+
+    @if $breakpoint == small {
+        @media only screen and (max-width: 56.25em) { @content }; //900px
+    }
+
+    @if $breakpoint == big {
+        @media only screen and (max-width: 78.5em) { @content }; //1200px
+    }
+
+    @if $breakpoint == bigger {
+        @media only screen and (max-width: 82em) { @content }; //1200px
+    }
+
+    @if $breakpoint == largest {
+        @media only screen and (min-width: 112.5em) { @content }; //1800px
+    }
+}

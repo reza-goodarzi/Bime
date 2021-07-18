@@ -1,0 +1,50 @@
+.footer {
+    background-color: $color-black;
+    padding: 5rem 10rem 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+
+    @include respond(small) {
+        flex-direction: column;
+        padding: 5rem 0.5rem;
+    }
+
+    &-links {
+        display: flex;
+        flex-direction: column;
+        margin: 0 1rem;
+
+        @include respond(phone) {
+            font-size: 2rem;
+        }
+        
+        @include respond(phone) {
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+    }
+
+    &-logos {
+        margin-right: auto;
+        align-self: center;
+
+        @include respond(phone) {
+            margin: 3rem 0 0;
+        }
+
+        img {
+            height: 10rem;
+            background-color: $color-white;
+            padding: 1rem;
+            border-radius: 50%;
+            border: 3px solid $color-primary;
+        }
+    }
+    p {
+        color: $color-white;
+        text-align: center;
+        margin-top: 2rem;
+        width: 100%;
+    }
+}
